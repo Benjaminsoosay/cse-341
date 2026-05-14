@@ -5,17 +5,14 @@
     "description": "Description of your API",
     "version": "1.0.0"
   },
-  "host": "https://cse-341-b60j.onrender.com",
+  "host": "cse-341-b60j.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
+
   "paths": {
     "/": {
       "get": {
-        "tags": [
-          "Hello World"
-        ],
+        "tags": ["Hello World"],
         "description": "",
         "responses": {
           "200": {
@@ -23,23 +20,18 @@
           }
         }
       }
-    }
     },
+
     "/users/": {
       "get": {
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+          "200": { "description": "OK" },
+          "500": { "description": "Internal Server Error" }
         }
       },
+
       "post": {
         "description": "",
         "parameters": [
@@ -59,21 +51,15 @@
           }
         ],
         "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+          "201": { "description": "Created" },
+          "500": { "description": "Internal Server Error" }
         }
       }
     },
+
     "/users/{id}": {
       "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -89,8 +75,8 @@
           "500": { "description": "Internal Server Error" }
         }
       },
+
       "put": {
-        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -120,8 +106,8 @@
           "500": { "description": "Internal Server Error" }
         }
       },
+
       "delete": {
-        "description": "",
         "parameters": [
           {
             "name": "id",
