@@ -1,0 +1,29 @@
+### GET all users
+GET http://localhost:3000/users
+
+### Get contact by id (using a real ID from your database)
+GET http://localhost:3000/users/69fd9afd4166f1df5072bac4
+
+### Create contact
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Ashley",
+    "lastName": "Meaver",
+    "email": "meaver@test.com",
+    "favoriteColor": "Brown",
+    "birthday": "06/19/2000"
+}
+
+### PUT contact (using the same real ID)
+PUT http://localhost:3000/users/69fd9afd4166f1df5072bac4 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Sarah",
+    "lastName": "Birch",
+    "email": "test@gmail.com",
+    "favoriteColor": "Green",
+    "birthday": "12/12/2020"
+}
