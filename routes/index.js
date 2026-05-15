@@ -1,12 +1,17 @@
 const router = require('express').Router();
 
+// Swagger
 router.use('/', require('./swagger'));
 
+// Home route
 router.get('/', (req, res) => {
-  //#swagger.tags=['Hello World']
-  res.send('Hello World');
+  res.send('Welcome to the Contacts API');
 });
 
+// Contacts routes (MongoDB CRUD)
+router.use('/contacts', require('./contacts'));
+
+// Users routes
 router.use('/users', require('./users'));
 
 module.exports = router;
